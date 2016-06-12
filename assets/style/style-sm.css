@@ -1,0 +1,646 @@
+
+@media (max-width: 450px){  /*if 450px and narrower*/
+     
+h1
+{
+    font-family: proxima;
+    font-size: 120%;
+    font-weight: normal;
+}
+    
+.home
+{
+    font-family: proxima;
+    background-color:#1CA96E ;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;    
+    margin: 0px;
+    padding: 0px;
+}
+     
+.detect-device-class
+ {
+       height:1px!important;
+       display: none;
+ }  
+    
+  .loading_div
+{
+    font-size:14px;
+}  
+  
+.logo-text-red
+{
+    text-align: center;
+    font-size:30px;
+    color:#FF4F4F; 
+    position:relative;
+    top:10px;
+    left:0px;
+    font-weight:bold;
+    font-family: sans-serif;
+}
+    
+.big-welcome-text
+{
+    text-align: center;
+    font-size:28px;
+    color:white;
+    position: relative;
+    top:8%;
+    left:0px;
+    font-family:sans-serif;
+}
+
+.big-icon-text
+{
+    color:white;
+    font-size:25px;
+    position:relative;
+    top:10px;
+    left:5px
+}
+    
+.big-icon
+{
+    width:45%;
+}    
+    
+ 
+    
+.icon-div
+{
+   
+    position: relative;
+    top:15%;
+}
+    
+ 
+.sub-menu-link-selected
+{
+    font-size:15px;
+    padding-top:10px;
+   
+    position:relative;
+    
+    font-weight:bold;
+    color:#FF4F4F;
+    border-bottom:solid #FF4F4F thick;
+    display: inline-block;
+    height: 100%;
+}   
+    
+.sub-menu-link
+{
+    font-size:15px;
+    padding-top: 10px;
+    position:relative;    
+    font-weight:bold;
+    text-align: left;
+}      
+    
+    
+.header-sub-menu
+{
+    border-bottom: solid #FF4F4F thin;
+    color:gray;
+    width: 100%;
+    height: 9%;
+    z-index:999;
+    background-color:white;
+}
+
+.header-sub-menu-attached
+{
+    border-bottom: solid #FF4F4F thin;
+    color:#696969;
+    width: 100%;
+    height: 45px;
+    position: fixed;    
+    top:40px;
+    z-index:999;
+    background-color:white;
+}  
+    
+.header-menu
+{
+    background-color: #FF4F4F;
+    color:white;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    display: none;
+    text-align: center;
+    z-index:999;
+    
+}
+
+.header-menu-visible
+{
+    background-color: #FF4F4F;
+    color:white;
+    width: 100%;
+    height: 40px;
+    position: relative;
+     
+    text-align: center;
+    z-index:999;
+    display: block;
+}
+    
+.logo-text-white
+{
+    font-size:26px;
+    color:white; 
+    position:relative;
+    top:0px;
+    left:0px;
+    font-family: sans-serif;
+}
+    
+    
+.video-card
+ {
+    background-color:white;
+     
+    width:100%; 
+    height:268px;
+    cursor:default ;
+     margin-top:90px; 
+ }
+
+ .video-card-vlogger-name
+ {
+     font-size:96%;
+     color:#696969; 
+     font-family:proxima-semi;
+     position:relative;
+     top:11px; 
+     left:3px;
+ }
+
+.video-card-referee-name
+ {
+     font-size:96%;
+     color:#7F7F7F; 
+     font-family:proxima-light;
+     position:relative;top:12px;
+ }
+    .video-card-referee-img
+     {
+         border-radius: 50%; 
+     }
+.video-card-vlogger-img
+ {
+     position:absolute;
+     left:0px;
+     top:-22px;
+     border-radius: 50%;
+     background-color:white;
+     border:solid white 8px;
+     z-index:9;
+     width:75px;
+     height:75px
+ }
+.video-card-topics
+ {
+     font-size:80%;
+     color:#7F7F7F; 
+     font-family:proxima-semi;
+     position:relative;
+     top:7px;
+     left:15px;
+     text-align:left;
+     padding:0px;
+     line-height: 0.8;
+ }
+.topic-icon
+ {
+     color:#FF4F4F;
+     font-size:14px
+ }
+ .topic-text
+    {
+        position: relative;
+        bottom:3px;
+        right:7px;
+    }
+ .like-button
+ {
+     cursor:pointer;
+     position:relative;
+     bottom:3px;
+     z-index: 2;
+     left:0px
+ }
+.red-button
+ {
+    background-color:#FF4F4F;
+    display:inline-block;
+    padding-left: 10px;
+     padding-right: 5px;
+     border-radius:40px;
+    height:28px;
+     font-size:14px;
+     font-family:proxima-semi;
+    position:relative;
+     top:8px;
+     left:12px;
+     cursor:pointer ;
+ }
+    .subscribe-button
+ {
+    
+    padding-left: 10px;
+     padding-right: 5px;
+     border-radius:40px;
+    height:28px;
+     font-size:14px;
+     font-family:proxima-semi;
+    position:relative;
+     top:10px;
+     left:12px;
+     cursor:pointer ;
+ }
+    
+ .red-button:hover
+ {
+    background-color:#FF6C6C;
+
+ }
+
+ .button-icon
+ {
+     color:white;
+     font-size:16px;
+ }
+
+ .gray-button
+ {
+     background-color:#A6A6A6 ;
+     display:inline-block;
+    padding-left: 10px;
+     padding-right: 10px;
+     border-radius:2px;
+    height:24px;
+     font-size:14px;
+     font-family:proxima-semi;
+    position:relative;
+     top:10px;
+     left:34px;
+     cursor:pointer
+ }
+
+ .gray-button:hover
+ {
+     background-color:#C3C3C3 ;
+
+ }
+  .gray-button-text
+     {
+         position:relative;
+         bottom:4px
+     }
+.activity-text
+{
+    font-size:11px;
+    text-align:right;
+    font-family:proxima-semi;
+    color:#696969;
+    position:relative;
+    top:15px;
+    left:15px;
+    cursor:default
+}
+
+.video-card-top-part
+{
+ height:17%;
+}
+
+.video-card-middle-part
+{
+ height:67%;
+ z-index:8;
+
+}
+
+.video-card-bottom-part
+{
+ height:16%;
+}
+
+.fave 
+{
+  width: 70px;
+  height: 45px;
+  background: url('../images/stars.png') no-repeat;
+  background-position: 0 3;
+  outline:0;
+ 
+}
+
+.fave:hover 
+{
+  background-position: -3519px 3;
+  outline:0;
+  transition: background 1s steps(55);
+}
+.fave-selected {
+    width: 35px;
+    height: 35px;
+    background: url('../images/star.png') no-repeat center center;
+    background-size: cover;
+    outline: 0;
+    position: relative;
+    top: 6px;
+    left: 15px;
+}
+ .one-topic
+     {
+         position:relative;
+         top:9px;
+     }
+     
+    .two-topics
+     {
+         
+     }   
+    
+   .genre-title
+     {
+        font-size:25px;
+         color:white;
+         font-family:proxima-semi;
+  
+         margin-top:40%;
+         text-align:center; 
+         padding:2px;
+        padding-left:10px;
+         padding-right:10px;
+         display: inline-block;
+         height:40px 
+     }
+    .genre-card
+{
+    float:left;
+    width:95%;
+    height: 220px;
+    position: relative;
+    margin:10px;
+    
+}  
+    
+ .profile-info
+ {
+     background-color:white;         
+     width:90%;
+     position: relative;
+     left:5%;
+     display:inline-block;
+     border-radius:5px
+ }
+
+ .profile-img
+ {
+     width:190px;
+     height:190px;
+     border-radius: 50%;
+     margin-top:10px;
+     border: solid #FF4F4F thick;
+ }
+ .profile-about
+ {
+     position: relative;
+     top:10px;
+     left:9%;
+     background-color:white;
+     width:86%;
+     padding:5px;
+     border-radius:5px
+ }
+ .profile-friends
+ {
+     background-color:white;
+     width:86%;
+     padding:8px;
+     border-radius:5px;
+     position:relative;
+     top:20px;
+     left:9%;
+     height:170px;
+ }
+.profile-videos
+ {
+     background-color:white;
+     width:86%;
+     padding:8px;
+     border-radius:5px;
+     position:relative;
+     top:25px;
+     left:9%;
+ }
+
+.video-card-channel-page
+ {   
+    height:200px;     
+     cursor:default ;
+     clear:both;     
+     margin-top:35px;     
+ }
+.profile-video-img
+ {
+     width:100%;
+     height:100%;
+     background-size: 100% auto ;
+     z-index:8;
+     border-radius:3px
+ }
+ .profile-video-title
+ {
+     background-color:#FF4F4F;
+     display:inline-block; 
+    color:white;
+     font-size:16px;
+     font-family:proxima-semi;
+    margin-top: 8px;
+     padding:6px;
+     text-align:left
+ }
+
+ .profile-video-time
+ {
+     background-color:#FF4F4F;
+     display:inline-block;
+     color:white;
+     font-size:14px;
+     font-family:proxima-semi;
+     margin-top: 0px;
+     padding:4px;
+     text-align:left
+ }
+  .profile-video-dur
+ {
+     position:relative;
+     bottom:32px;
+     margin-right:8px;
+     color:White;
+     font-size:18px;
+     font-family:proxima-semi;
+     text-align:right
+ }
+    
+  
+     .profile-videos-list
+     {
+         position:relative;
+         width:100%;
+          
+     }
+       
+    
+     .social-media-icon
+     {
+         color:#FF4F4F;
+         font-size:20px;
+         margin-left:10px;
+         margin-right:10px;
+         outline: none;
+        
+          
+     }
+    
+    .share-button
+ {
+      cursor:pointer;
+     position:relative;
+     top:13px;
+     left:15px;
+ }
+.channel-social-icon-twitter
+ {
+     color:#DEE0E0;
+     font-size:16px;
+    transition: color 250ms linear;
+      -moz-transition:  color 250ms linear;    /* FF3.7+ */
+      -o-transition:  color 250ms linear;      /* Opera 10.5 */
+      -webkit-transition:  color 250ms linear; /* Saf3.2+, Chrome */
+
+ }
+ .channel-social-icon-twitter:hover
+ {
+     color:#4099FF;
+ }
+.channel-social-icon-fb
+ {
+     color:#DEE0E0;
+     font-size:16px;
+        transition: color 250ms linear;
+      -moz-transition:  color 250ms linear;    /* FF3.7+ */
+      -o-transition:  color 250ms linear;      /* Opera 10.5 */
+      -webkit-transition:  color 250ms linear; /* Saf3.2+, Chrome */
+
+ }
+ .channel-social-icon-fb:hover
+ {
+     color:#3b5998;
+
+
+ }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+/* ____________________________________________________ iphone 6 css ________________________________________________*/
+
+ 
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait){ 
+ 
+  .video-card-vlogger-name
+ {
+     font-size:110%;
+     color:#696969; 
+     font-family:proxima-semi;
+     position:relative;
+     top:11px; 
+ }   
+ 
+    .activity-text
+{
+    font-size:11px;
+    text-align: right;
+    width: 84%;
+    font-family:proxima-semi;
+    color:#696969;
+    position:relative;
+    top:15px;
+   
+    cursor:default;
+   
+}
+   
+   
+}
+
+
+
+
+/* ____________________________________________________ iphone 6s+ css ________________________________________________*/
+
+ 
+
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px){ 
+ 
+     .video-card-vlogger-name
+ {
+     font-size:110%;
+     color:#696969; 
+     font-family:proxima-semi;
+     position:relative;
+     top:11px; 
+ }
+    
+    .activity-text
+{
+    font-size:11px;
+    text-align: right;
+    width: 84%;
+    font-family:proxima-semi;
+    color:#696969;
+    position:relative;
+    top:15px;
+   
+    cursor:default;
+}
+
+   
+}
+
+
+/*
+
+5 & 5S:
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px)
+
+For more, go to: http://stephen.io/mediaqueries/#iPhone6
+*/

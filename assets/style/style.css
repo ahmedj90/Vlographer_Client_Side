@@ -1,0 +1,85 @@
+/*
+Gray text color (sub menu):  696969 
+Red Color (logo): FF4F4F
+
+*/
+.mm-menu  { width: 100% !important; }
+
+.container-fluid
+{
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+a { color: inherit; } 
+a:hover { color: inherit; } 
+html, body
+{
+   width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+   /* font-family: proxima;*/
+    -webkit-overflow-scrolling: touch;
+
+    overflow: hidden; 
+}
+a
+{
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: none;
+}
+@font-face 
+{
+    font-family: proxima;
+    font-weight: normal;
+    font-style: normal;
+    src:url("../fonts/ProximaNova-Regular.otf") format("opentype");
+            
+}
+
+@font-face 
+{
+    font-family: proxima-light;
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/ProximaNova-Light.otf") format("opentype");
+         
+}
+
+@font-face 
+{
+    font-family: proxima-semi;
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/ProximaNova-Semibold.otf") format("opentype");      
+}
+
+ 
+
+.hide-div
+{
+   visibility:hidden
+}
+
+
+.scrollable-div-90
+{
+    height:100%;
+    width:100%; 
+    overflow-y:scroll;
+    overflow-x: hidden;
+    z-index:99;
+    
+}
+
+.ng-view-style
+{
+    background-color: #E8E8E8;
+}
+

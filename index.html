@@ -1,0 +1,203 @@
+<html ng-app="vlographerApp" ng-controller="baseCtrl">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <base href="/vlographer_web/">
+        
+        <title ng-bind="Page.title()"></title>
+        
+        <!-- SEO -->
+        <meta name="author" content="vlographer">
+        <meta name="description" content="{{ Page.description()}}">
+          
+        <!-- Social: Twitter -->
+        <meta name="twitter:card" content="{{Page.twitter()['card']}}">
+        <meta name="twitter:site" content="{{Page.twitter()['site']}}">
+        <meta name="twitter:creator" content="{{Page.twitter()['creator']}}">
+        <meta name="twitter:title" content="{{Page.twitter()['title']}}">
+        <meta name="twitter:description" content="{{Page.twitter()['description']}}">
+        <meta name="twitter:image:src" content="{{Page.twitter()['image']}}">
+        
+        <!-- Social: Facebook / Open Graph -->
+      
+        <meta property="og:url" content="{{Page.facebook()['url']}}">
+       
+        <meta property="og:title" content="{{Page.facebook()['title']}}">
+        <meta property="og:image" content="{{Page.facebook()['image']}}"/>
+        <meta property="og:description" content="{{Page.facebook()['description']}}">
+        <meta property="og:site_name" content="{{Page.facebook()['site_name']}}">
+      
+
+        <!-- load bootstrap and fontawesome via CDN -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+     <!--   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />-->
+        <link rel="stylesheet" href="assets/style/style.css" />
+        <link rel="stylesheet" href="assets/style/icons/html_css/css/glyphicons.css" />        
+        <link rel="stylesheet" href="assets/style/style-md.css" />
+        <link rel="stylesheet" href="assets/style/style-sm.css" />
+        <link rel="stylesheet" href="assets/style/loading-bar.css" />
+        <link rel="stylesheet" href="assets/style/custom-non-contridicting-flat-ui.css" />
+        <link rel="stylesheet" href="assets/style/bootstrap-select.css" />
+        <link rel="stylesheet" href="assets/style/jquery.typeahead.min.css" />
+        
+        <!-- load angular and angular route via CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>        
+        
+        <!--Flat UI lib (css framework)-->
+        <script src="assets/libs/flat-ui.min.js"></script>
+        <!--additional filter options for ng-repeat-->
+        <script src="assets/libs/angular-filter.min.js"></script>
+        <!--loading bar animation when changing routes or HTTP requests-->
+        <script src="assets/libs/loading-bar.min.js"></script>
+        <!--load more data on scroll-->
+        <script src="assets/libs/ng-infinite-scroll.min.js"></script>
+        <!--Allow orderBy to work on json objects in ng-repeat (coz they work only with arrays)-->
+        <script src="assets/libs/ng-order-object-by.js"></script>     
+        <!--twitter search box-->
+        <!-- <script src="assets/libs/jquery.typeahead.min.js"></script>   -->
+            <script src="assets/libs/typeahead.bundle.min.js"></script> 
+        
+        <!--read more link fro long texts-->
+        <script src="assets/libs/readmore.min.js"></script>
+        <!--time friendly string-->
+        <script src="assets/libs/jquery.timeago.js"></script>
+        
+        <!--Angularjs Main files-->
+        <script src="app/app.module.js"></script>
+        <script src="app/app.routes.js"></script>
+                
+        <!--My custom shared services-->
+        <script src="app/shared/services/querystring.service.js"></script>
+        <script src="app/shared/services/helper.service.js"></script>        
+        <!--Channel-->
+        <script src="app/shared/channel/channel.directive.js"></script>
+        <script src="app/shared/channel/channel.service.js"></script>
+        <script src="app/shared/channel/channel.ctrl.js"></script>        
+        <!--video-->
+        <script src="app/shared/video/video.service.js"></script>   
+         <!--search-->
+        <script src="app/shared/search/search.ctrl.js"></script>   
+        <script src="app/shared/user/user.service.js"></script>   
+         <script src="app/shared/services/page.service.js"></script>   
+              
+        <!--Masterpage Controller (runs on every page request)-->
+        <script src="app/app.baseCtrl.js"></script>        
+        
+        <!--home-->
+        <script src="app/component/home/home.directive.js"></script>
+        <script src="app/component/home/home.service.js"></script>
+        <script src="app/component/home/home.ctrl.js"></script>      
+         <!--genres-->
+        <script src="app/component/genres/genres.directive.js"></script>
+        <script src="app/component/genres/genres.service.js"></script>
+        <script src="app/component/genres/genres.ctrl.js"></script>      
+        <!--genre channels-->
+        <script src="app/component/genre_channels/genre_channels.directive.js"></script>
+        <script src="app/component/genre_channels/genre_channels.service.js"></script>
+        <script src="app/component/genre_channels/genre_channels.ctrl.js"></script>      
+         <!--search result channels-->
+        <script src="app/component/search_result/search_result.directive.js"></script>
+        <script src="app/component/search_result/search_result.service.js"></script>
+        <script src="app/component/search_result/search_result.ctrl.js"></script>      
+         <!--user liked channels-->        
+        <script src="app/component/user_likes/user_likes.service.js"></script>
+        <script src="app/component/user_likes/user_likes.ctrl.js"></script>   
+             
+        
+         <!--slid menu stuff-->		
+        <link type="text/css" rel="stylesheet" href="assets/style/jquery.mmenu.all.css" />
+		    <script type="text/javascript" src="assets/libs/jquery.mmenu.min.all.js"></script>
+        
+        <script>
+             
+            $( document ).ready(function() {                
+
+                //var language = window.navigator.userLanguage || window.navigator.language;
+                //alert(language);
+                
+                
+                //on load, detect device type
+                checkDeviceType();
+                //initialize the slide menu                
+                 $("nav#menu").mmenu({                      
+                      onClick: {
+                        close: true
+                      },
+                     navbar: {
+                        title: "my menu title",
+                        add:false 
+                     }
+                 });
+                
+                function checkDeviceType()
+                {
+                    var device_type=$('div.detect-device-class').css('height');
+                    //alert(device_type);
+                    if(device_type!=null && device_type!='' && device_type=="1px") //mobile
+                        $('div.detect-device-class').text("mobile");                     
+                    else    //desktop
+                        $('div.detect-device-class').text("desktop");
+                }
+                
+                 
+            });
+        </script>
+            
+             
+       
+
+    </head>
+    <body   >  
+                
+        <div class="container-fluid page_css" >                      
+         
+	        <nav id="menu">
+              <ul>
+				 
+                    
+                    <li><a href="./">Home</a> </li>					
+					          <li><a href="discover/">Discover</a></li>
+                    <li><a href="orders/">My Bookings</a></li>                       
+                    <li><a href="support/">Support</a></li>          
+                    <li><a href="FAQ/">FAQ</a></li>                                                         
+                    <li>
+                         <a href="https://www.facebook.com/YogaPanda.co" class="social-icon" target="_blank"> 
+                            <span class="fui-facebook"></span>
+                         </a>
+                         <a href="https://twitter.com/YogaPandaCo" class="social-icon" target="_blank"> 
+                            <span class="fui-twitter"></span>
+                         </a>   
+                         <a href="https://www.instagram.com/yogapandaco/" class="social-icon" target="_blank"> 
+                            <span class="fui-instagram"></span>                            
+                         </a>
+                         <a href="https://itunes.apple.com/us/app/yoga-panda-yoga-class-finder/id1016793831?mt=8" class="social-icon" 
+                            target="_blank"> 
+                            <span class="fui-apple"></span>                            
+                         </a>                                                                          
+                    </li>
+				</ul>
+			</nav>
+        
+           
+            <!--The ng-view attribute here will tell Angular where we wish to inject HTML based on the URL a user visits.-->
+            <div class="ng-view-style" ng-view >
+
+            </div>
+              
+            
+             <!--this div's hight=1 if screen is small and =2 if big so you can check with jquery: 
+                  var index=$('div.detect-device-class').css('height');-->
+             <div class="detect-device-class"></div>
+            
+            
+
+            
+        </div>
+    
+        
+    </body>
+</html>

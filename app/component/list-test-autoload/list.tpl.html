@@ -1,0 +1,46 @@
+
+
+<style>
+
+#list-wrapper{
+    max-height: 400px;
+    overflow-y: scroll;
+    
+    margin-top: 20px;
+    border: solid 1px black;
+}
+
+h4{
+    padding: 20px;
+}
+
+</style>
+
+<a href="./">hommmmmmmmmw</a>
+  <div   ng-controller="listController">
+      <div id="list-wrapper">
+          <div class="list" infinite-scroll='loadMore()' 
+        infinite-scroll-distance='2' 
+        infinite-scroll-container="'#list-wrapper'">
+            <div class="header">
+
+            </div>
+
+            <div class="list-table" >
+                <table class="table">
+                    <tbody>
+                        <tr ng-repeat="item in infiniteList">
+                            <td style="width:100%">
+                                <div>{{item}}</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style='clear: both;'></div>
+            </div>
+      </div>
+      
+      <h4>{{scrollTriggered}}</h4>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</div>

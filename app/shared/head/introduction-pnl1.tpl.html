@@ -1,0 +1,88 @@
+<!--desktop video header-->
+ <div class="row hidden-xs home-icons-set"> 
+     <div class="col-md-12 col-sm-12">                                          
+          <div ng-show="!isMobile" id="block2"  class="video-bg-div"
+                 data-vide-bg="mp4: assets/videos/2/video, webm: assets/videos/2/video, poster: assets/videos/2/video"
+                 data-vide-options="posterType: png,position: 0% 50%">
+             <div style="width:100%;height:100%;background:rgba(86 ,86 ,86 , 0.6);">
+                <div class="logo-text-red">
+                    <b>Vlographer</b> 
+                </div>
+
+                <center>
+                     <div class="big-welcome-text">
+                        <b>Discover Awesome <span style="color:#FF4F4F">Youtubers</span></b>
+                     </div>
+                </center>
+
+                <!--introduction icons set-->
+                <center>
+                    <div class="row home-icons-set" style="width:70%;position:relative;top:45px; "> 
+                        <div class="col-md-4 col-sm-4">
+                            <img src="assets/images/categories.png" class="big-icon" />
+                            <br>
+                            <span class="big-icon-text">
+                                Explore By Genres
+                            </span>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <img src="assets/images/heart.png" class="big-icon" />
+                             <br>
+                            <span class="big-icon-text">
+                                Get Recommendations
+                            </span>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <img src="assets/images/youtube.png" onclick=" setTimeout( function(){ window.location='https://www.youtube.com';}, 86400000);" class="big-icon"/>
+                             <br>
+                            <span class="big-icon-text" >
+                                Subscribe On The Go!
+                            </span>
+                        </div>
+                    </div>
+                  </center>
+             <br>
+              </div>
+           </div>     
+     </div>
+</div>
+
+<!--mobile video header-->
+<div class="row hidden-lg hidden-md hidden-sm home-icons-set" > 
+     <div class="col-xs-12">
+        <div  style=" background: linear-gradient(
+                      rgba(0, 0, 0, 0.5), 
+                      rgba(30, 30, 30, 0.6)), 
+                      url(assets/images/bg-movie-sm.gif) no-repeat center center fixed;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        background-size: cover;
+                        height:91%;z-index:999;">
+
+                <div class="logo-text-red">
+                    <b>Vlographer</b> 
+                </div>
+                <br>
+
+
+                <div class="big-welcome-text" align="center">
+                    <b>Discover Awesome <br><span style="color:#FF4F4F;font-size:30px">Youtubers</span></b>
+                </div>
+
+                <!--introduction icons set-->
+                <div class="icon-div" align="center" >
+                    <img  src="assets/images/categories.png" class="big-icon" />
+                    <br>
+                    <span class="big-icon-text">
+                        Explore By Genres
+                    </span>
+                </div>                                
+
+        </div> 
+     </div>
+</div> 
+ 
+
+<!--video background-->
+<script src="assets/libs/jquery.vide.min.js"></script>  

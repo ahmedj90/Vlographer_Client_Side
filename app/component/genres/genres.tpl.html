@@ -1,0 +1,84 @@
+
+
+<div ng-controller="genresCtrl">
+    
+    <div ng-include src="'app/shared/head/full-header1.tpl.html'"  ></div>
+    
+    <div id="scroll" class="scrollable-div-90"> 
+        
+      
+       <div class="row"> 
+             <!--left side pandl-->
+             <div class="col-md-2 col-sm-0 hidden-xs">  
+                 &nbsp;
+             </div>
+            
+             <!--genres list-->
+             <div class="col-md-9 col-sm-12 col-xs-12" > 
+            
+                 <div ng-show="errors.length>0">
+                      <br><br><br>
+                      <div id="error-panel" class="alert alert-danger" role="alert" >
+                               <ul>
+                                    <li ng-repeat="error in errors"> {{error}}</li>
+                               </ul>                              
+                     </div>
+                 </div>
+                    
+                 
+                  <div class="genres-list" style="position:relative;top:70px">
+                      
+                      <div class="genre-card" ng-click="genre_click(genre.GID, genre.text_id)" ng-repeat="genre in genres" style="width:300px;height:300px;position:relative;cursor:pointer">
+                            
+                           <img src="{{SERVER_BASE_URL + genre.img_path}}" width="300" height="300" style=" border-radius: 3px;" />
+                            
+                           <div style="position:absolute;width:300px;bottom:30;left:0;z-index:5;">                        
+                                
+                                    <div align="center">
+                                        <div class="genre-title" style="background-color:{{genre.color}}">
+                                           {{genre.title}} 
+                                        </div>   
+
+
+                                    </div>
+                               
+                            </div>
+                            
+                            <div style="position:absolute;bottom:0;left:0;z-index:5;padding-left:2px;font-size:10px;;opacity: 0.5;cursor:default;color:white">      
+                                {{genre.source_handle}}
+                            </div>
+                        
+                        </div>
+                      
+                      <!--<div class="genre-card" ng-repeat="genre in genres"
+                           style="background:url({{SERVER_BASE_URL + genre.img_path}}) no-repeat 100% 100%;background-size: 300px 300px;">
+                          
+                            <a ng-click="genre_click(genre.GID, genre.text_id)" href="">
+                                <div align="center">
+                                    <div class="genre-title" >
+                                       {{genre.title}} 
+                                    </div>   
+                                    
+                                    
+                                </div>
+                            </a>    
+                              
+                        
+                        </div> -->
+                 
+                 </div> 
+               
+             </div> 
+                 
+             <!--right side pandl-->
+             <div class="col-md-1 col-sm-0 hidden-xs">  
+                 &nbsp;
+             </div>            
+        </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>      
+    
+    </div>
+</div>
+ 
+<!--video background-->
+<script src="assets/libs/jquery.vide.min.js"></script>                        

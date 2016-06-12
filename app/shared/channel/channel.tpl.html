@@ -1,0 +1,313 @@
+
+
+<div ng-controller="channelCtrl">
+    <div ng-include src="'app/shared/head/full-header1.tpl.html'"  ></div>
+    
+    <div id="scroll6" class="scrollable-div-90">   
+        
+    <div class="row"> 
+             <!--left side pandl-->
+             <div class="col-md-2 col-sm-2 hidden-xs">  
+                 &nbsp;
+             </div>            
+            
+             <div class="col-md-8 col-sm-8 col-xs-12" > 
+                
+                                 
+                 <div class="row" style="position:relative;top:70px;"> 
+                     <!--youtuber image-->
+                     <div class="col-md-4 col-sm-4 col-xs-12" > 
+                         <div class="profile-info" align="center">
+                             
+                             <img src="{{channel.img_link}}" class="profile-img" style="">
+                             
+                            <h1 style="color:#FF4F4F;font-size:220%;font-family:proxima-semi;margin-top: 5px;">
+                                <span ng-if="channel.custom_name">
+                                    {{channel.custom_name}}
+                                </span>
+                                <span ng-if="!channel.custom_name">
+                                    {{channel.name}}
+                                </span>
+                                
+                            </h1>
+                             
+                            
+                                                          
+                            <div  style=" ">                                                             
+                                   <div ng-if="channel.categories!==null" ng-repeat="category in channel.categories track by $index" 
+                                        ng-class="category.cat_icon"  
+                                        style="text-align: center; margin: 0px auto 0px 10;">                      
+                                       <i class="topic-icon" ></i>                                                                                                                <span class="topic-text"  >
+                                            {{category.tag}} 
+                                       </span> 
+                                   </div>
+                               
+                            </div>
+                             
+                             <div style="clear:both"></div>
+                                                        
+                             <div ng-if="channel.yt_id" style="position:relative;top:15px; "  >
+                                <script src="https://apis.google.com/js/platform.js"></script>
+                                <div class="g-ytsubscribe" data-channelid="{{channel.yt_id}}" 
+                                     data-layout="default" data-count="default">
+                                   
+                                 </div> 
+                                 <br>
+                             </div>
+                             
+                             <br>
+                             
+                            <div style="color:gray;font-size:14px;position:relative;top:0px;margin-bottom:5px;margin: 6px;">
+                                 {{channel.post_interval_text}}
+                            </div>
+
+
+                         </div>
+                     </div>
+                     
+                     <!--youtuber description, similar, videos-->
+                     <div class="col-md-8 col-sm-8 col-xs-12" style="padding-left:0px;"> 
+                         
+         
+         
+                         <div class="profile-about" align="left">
+                            <h2 style="color:#FF4F4F;font-size:26px;font-family:proxima-semi;margin-top: 0px;">
+                                About {{channel.custom_name}}
+                            </h2>
+                            
+                            <p id="description" ng-bind-html="channel.description" 
+                               style="  font-size:15px;color:gray;padding-left:8px;">
+                                
+                            </p> 
+                            
+                             
+                            <p id="description" ng-show="channel.description.length==0" 
+                               style="  font-size:15px;color:gray;padding-left:8px;">
+                                Nothing to say here...
+                            </p> 
+                             
+                             <div class="social-media-icons-div" style="position:relative;left:3px">
+                                       <a style=" text-decoration: none;" href="{{channel.url}}" target="_blank">
+                                           <span  class="fui-youtube social-media-icon" style="font-size:24px;position:relative;top:2px">
+                                           </span>  
+                                       </a>
+
+
+                                       <a ng-repeat="social_media in social_medias track by $index" 
+                                            style=" text-decoration: none;" href="{{social_media.url}}" target="_blank"
+                                            ng-if="social_media.css_class_name!='fui-youtube'">
+                                             <span class="{{social_media.css_class_name}} social-media-icon">
+                                             </span>  
+                                       </a>
+
+
+                                       <!-- <span  class="fui-twitter social-media-icon"></span>  
+                                        <span  class="fui-instagram social-media-icon"></span>   
+                                        <span  class="fui-facebook social-media-icon"></span>  
+                                        <span  class="fui-tumblr social-media-icon"></span> 
+                                        <span  class="fui-wordpress social-media-icon"></span>  
+                                        <span  class="fui-google-plus social-media-icon"></span>  
+                                         <span  class="fui-pinterest social-media-icon"></span>  
+                                       missing twich and snapchat-->
+                              </div>
+                             
+                         </div>
+                         
+                         <div ng-show="similarChannels.length >0" class="profile-friends hidden-xs"   align="left">
+                            <h2 style="color:#FF4F4F;font-size:18px;font-family:proxima-semi;margin-top: 2px;">
+                              You might also like
+                            </h2>
+                            
+                             <div class="similar-channels-panel" style="width:100%" align='center' >                      
+                                 
+                                 <div ng-repeat="friend in similarChannels|limitTo:4" 
+                                      style="float:left;width:25%; ">
+                                    <a href="{{friend.CHID}}/{{friend.name.split(' ').join('-')}}">
+                                         <img class="friend-img" src="{{friend.img_link}}" style="width:70% ;border-radius: 50%; ">
+                                         <br>
+                                         <span style="font-size:13px;position:relative;top:5px;color:gray">
+                                             {{friend.name}}
+                                         </span>
+                                     </a>
+                                 </div>
+                             </div>
+                                                              
+                         </div>
+                         
+                         <div  ng-show="videos.length >0" class="profile-videos" align="left">
+                            <h2 style="color:#FF4F4F;font-size:18px;font-family:proxima-semi;margin-top: 2px;text-align:left">
+                              {{channel.custom_name}}'s Recent Videos
+                               
+                            </h2>
+                             
+                            <div class="profile-videos-list"  align="center">
+   <div  id="scroll6" > 
+        <div  infinite-scroll='loadMore()' 
+             infinite-scroll-immediate-check="true"
+              infinite-scroll-container='"#scroll6"'
+              infinite-scroll-distance='0'
+              infinite-scroll-disabled='stopImport'>  
+                                 <!--vide card-->
+                                 <div class="video-card-channel-page" ng-repeat="video in videos" >
+                                     
+                                     <div  id="{{'video_img_' + video.VID}}" yt_id="{{video.video_id}}" data="{{video.VID}}"
+                                          onclick="showPlayer(this)" class="profile-video-img" 
+                                          style="background: url('{{video.high_thumb_url}}') no-repeat center center;">
+                                         
+                                        <div class="video-item" align="left">
+                                            <div   style="color:white;font-family:proxima-semi;
+                                                               padding:2px;padding-left:5px;padding-right:5px;height:100%" >
+                                               
+                                                 <h2 style="" class="profile-video-title"> 
+                                                    {{video.title}}  
+                                                 </h2>
+                                                <br>
+                                                 <h2 class="profile-video-time"> 
+                                                     
+                                                      <time class="time" datetime="{{video.published_at_iso}}">{{video.published_at}}</time>
+                                                 </h2>
+                                            </div>   
+                                            <div class="profile-video-dur">
+                                                {{video.duration}}
+                                            </div>
+                                        </div>
+                                         
+                                     </div>
+
+                                     <div id="{{'player_' +  video.VID}}" style="z-index:8;display:none"></div>
+
+                                  </div>
+</div></div>
+                                  <br><br> 
+                                  <div ng-show='videosBusy' class="loading_div">
+                                    <center>                            
+                                        Getting more videos...
+                                    </center>
+
+                                  </div>
+                                 
+                             </div>
+                                
+                             <!--load more button-->
+                             <center>
+                                 <div ng-show="!videosBusy" style="height:40px;font-size:25px;font-family:proxima-semi;background-color:#FF4F4F;color:white;
+                                             display:inline-block;margin:15px;padding-left:8px;padding-right:8px;padding-top:2px;cursor:pointer" align="center"
+                                      ng-click="loadMore()">
+                                    Load More Videos
+                                 </div>
+                             </center>
+                             <br><br>
+                         </div>
+                         
+                         
+                     </div>
+                 </div>                                  
+               
+             </div> 
+                 
+             <!--right side pandl-->
+             <div class="col-md-2 col-sm-2 hidden-xs">  
+                 &nbsp;
+             </div>            
+        
+        </div>
+     
+  </div>
+    
+</div>
+  
+ 
+ 
+
+<script>
+
+                          // 2. This code loads the IFrame Player API code asynchronously.
+                          var tag = document.createElement('script');
+
+                          tag.src = "https://www.youtube.com/iframe_api";
+                          var firstScriptTag = document.getElementsByTagName('script')[0];
+                          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                          // 3. This function creates an <iframe> (and YouTube player)
+                          //    after the API code downloads.
+                          var player=null;
+                          var isPlayerActive=false;
+                          var activeImgDiv="";
+                          var activePlayerDiv="";
+
+                          function showPlayer(imgObj)
+                          {                                      
+                              var vid=$(imgObj).attr("yt_id");
+
+                              if(isPlayerActive) //player is visible in page
+                              {
+                                  //reset the previous player in the page and show back image
+                                  $('#'+activePlayerDiv).hide();
+                                  $('#'+activeImgDiv).show();
+                                  player.destroy();
+                              }
+
+                              //get the new video panel info
+                              activeImgDiv= "video_img_" + $(imgObj).attr("data");
+                              activePlayerDiv= "player_" + $(imgObj).attr("data");
+                              isPlayerActive=true;
+                              //console.log('hiding ' + activeImgDiv + " - showing " + activePlayerDiv);                          
+                              loadVideo(vid, activePlayerDiv);                          
+
+                          }
+
+                          function loadVideo(vid, playerId)
+                          {
+                                //alert(vid + " - " + playerId);
+                                player = new YT.Player(playerId, {
+                                  height: '100%',
+                                  width: '100%',
+                                  videoId: vid,
+                                  events: {
+                                    'onReady': onPlayerReady,
+                                    'onStateChange': onPlayerStateChange
+                                  }
+                                });
+
+                          }
+
+                          function onYouTubeIframeAPIReady() {                         
+                               //$('#player').hide();
+                          }
+
+                          // 4. The API will call this function when the video player is ready.
+                          function onPlayerReady(event) {
+                             event.target.playVideo();
+                             $('#'+activeImgDiv).hide();
+                             $('#'+activePlayerDiv).show();                            
+                          }
+
+                          // 5. The API calls this function when the player's state changes.
+                          //    The function indicates that when playing a video (state=1),
+                          //    the player should play for six seconds and then stop.
+                          var done = false;
+                          function onPlayerStateChange(event) {
+                                /*if (event.data == YT.PlayerState.PLAYING && !done) {
+                                  setTimeout(stopVideo, 6000);
+                                  done = true;
+                                }
+
+                              /*
+                                -1 – unstarted
+                                0 – ended
+                                1 – playing
+                                2 – paused
+                                3 – buffering
+                                5 – video cued
+                                */
+                          }
+
+                          function stopVideo() {
+                            player.stopVideo();
+                          }
+
+ 
+                     </script>
+
+<!--video background-->
+<script src="assets/libs/jquery.vide.min.js"></script>   

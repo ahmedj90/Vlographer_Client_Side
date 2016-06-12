@@ -1,0 +1,50 @@
+
+
+<div ng-controller="genresCtrl">
+    
+    <div ng-include src="'app/shared/head/full-header.tpl.html'"  ></div>
+    
+    <div id="scroll" class="scrollable-div-90"> 
+        
+      
+       <div class="row"> 
+             <!--left side pandl-->
+             <div class="col-md-1 col-sm-0 hidden-xs">  
+                 &nbsp;
+             </div>
+            
+             <!--genres list-->
+             <div class="col-md-10 col-sm-12 col-xs-12" > 
+              
+                  <div class="genres-list" style="position:relative;top:70px">
+                        <div class="genre-card" ng-repeat="genre in genres"
+                           style="background:url({{genre.img_path}}) no-repeat 100% 100%;background-size: 100% 100%;">
+                            <a href="youtube/channels/{{genre.text_id}}">
+                                <div style="background:rgba(86 ,86 ,86 , 0.5);width: 100%;height: 100%;" align="center">
+                                    <div class="genre-title" style="font-size:25px;color:white;font-family:proxima-semi;
+                                                            background-color:orange;margin-top:60%;text-align:center; padding:2px;
+                                                            padding-left:5px;padding-right:5px;display: inline-block;height:40px" >
+                                       {{genre.title}} 
+                                    </div>   
+                                    
+                                    
+                                </div>
+                            </a>    
+                              
+                            <br><br><br><br><br><br> 
+                        </div>
+                  </div>                  
+             </div> 
+                 
+             <!--right side pandl-->
+             <div class="col-md-1 col-sm-0 hidden-xs">  
+                 &nbsp;
+             </div>            
+        </div>
+                
+    
+    </div>
+</div>
+ 
+<!--video background-->
+<script src="assets/libs/jquery.vide.min.js"></script>                        
