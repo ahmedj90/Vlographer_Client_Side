@@ -146,7 +146,7 @@ angular.module('vlographerApp')
                             CHID_arr[i]=responses[0].data.data[i].CHID;
                                 
                             // *** REMOVE *****
-                            responses[0].data.data[i].high_thumb_url =             responses[0].data.data[i].high_thumb_url.replace("https:\\","https://").replace("\\","/").replace("vi\\","vi/");                         
+                            responses[0].data.data[i].high_thumb_url = responses[0].data.data[i].high_thumb_url.replace("https:\\","https://").replace("\\","/").replace("vi\\","vi/");                         
                             
                             if(responses[0].data.data[i].post_interval>=1 && responses[0].data.data[i].post_interval<=2)
                             {

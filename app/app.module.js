@@ -9,8 +9,8 @@ App.module.js is the start of your application, this is where you define the mai
     var vlographerApp = angular.module('vlographerApp', ['ngRoute', 'cfp.loadingBar', 'cfp.loadingBarInterceptor', 'ngAnimate', 'infinite-scroll', 'angular.filter', 'ngOrderObjectBy',  'ngSanitize', 'ngCookies']);
     
      //Configuration variables
-    vlographerApp.constant('SERVER_URL','http://localhost/vlographer/public/')  //http://52.1.120.142/api_v2/public/index.php/
-                .constant('SERVER_BASE_URL','http://localhost/vlographer/public/') //http://52.1.120.142/api_v2/public/              
+    vlographerApp.constant('SERVER_URL','http://localhost/vlographer_server/public/')  //http://52.1.120.142/api_v2/public/index.php/
+                .constant('SERVER_BASE_URL','http://localhost/vlographer_server/public/') //http://52.1.120.142/api_v2/public/              
                 .constant('DOMAIN','http://www.vlographer.com/');
     
    
